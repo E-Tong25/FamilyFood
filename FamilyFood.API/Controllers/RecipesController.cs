@@ -25,12 +25,8 @@ public class RecipesController : ControllerBase
 
     ////GET: api/recipes/creator
     //[HttpGet(Name = "Get All Recipes By Creator")]
-    //public async Task<ActionResult<Creator>> GetRecipesByCreator(List<Recipe> recipes)
-    //{
-    //    if (_context
+   // Get all recipes from a Single Creator Name
 
-    //            return _recipesRepository.GetAllRecipesofType();
-    //}
 
     //POST
     [HttpPost(Name = "Post Recipe")]
