@@ -1,5 +1,4 @@
 # FamilyFood
-# FamilyFood
 This project is an API of a web application that takes data from recipes such as the ingredients, description, and creator. 
 
 Features include: 
