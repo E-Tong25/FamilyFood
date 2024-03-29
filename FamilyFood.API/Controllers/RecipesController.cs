@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Family_Food.Models;
+using Family_Food.Interfaces;
 using Family_Food.Repositories;
 using Family_Food.Data;
 
@@ -9,9 +10,9 @@ namespace Family_Food.Controllers;
 [Route("api/[controller]")]
 public class RecipesController : ControllerBase
 {
-    private RecipesRepository _recipesRepository;
+    private IRecipesRepository _recipesRepository;
 
-    public RecipesController(RecipesRepository recipesRepository)
+    public RecipesController(IRecipesRepository recipesRepository)
     {
         _recipesRepository = recipesRepository;
     }

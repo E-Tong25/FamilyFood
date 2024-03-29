@@ -16,7 +16,7 @@ namespace Family_Food.Models
 		[Range(1,40, ErrorMessage ="For a {0}, there must be between {1} and {2}.")]
 		public ICollection<Ingredient> Ingredients { get; set; }
 
-		public int CreatorId { get; set; }
+		public Guid CreatorId { get; set; } = Guid.NewGuid();
 		public Creator Creator { get; set; } = null!;
 
 		public DateTime OriginallyCreated { get; set; }

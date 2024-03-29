@@ -1,5 +1,6 @@
 ﻿using Family_Food.Repositories;
 using Family_Food.Models;
+using Family_Food.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Family_Food.Controllers;
@@ -8,9 +9,9 @@ namespace Family_Food.Controllers;
 [Route("api/[controller]/[action]")]
 public class CreatorsController : ControllerBase
 {
-    private CreatorsRepository _creatorsRepository;
+    private ICreatorsRepository _creatorsRepository;
 
-    public CreatorsController(CreatorsRepository creatorsRepository)
+    public CreatorsController(ICreatorsRepository creatorsRepository)
     {
         _creatorsRepository = creatorsRepository;
     }

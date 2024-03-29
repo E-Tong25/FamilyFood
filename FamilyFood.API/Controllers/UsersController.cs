@@ -1,5 +1,6 @@
 ﻿using Family_Food.Repositories;
 using Family_Food.Classes;
+using Family_Food.Interfaces;
 using Family_Food.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,9 +11,9 @@ namespace Family_Food.Controllers;
 
 public class UsersController : ControllerBase
 {
-    private UsersRepository _usersRepository;
+    private IUsersRepository _usersRepository;
 
-    public UsersController(UsersRepository usersRepository)
+    public UsersController(IUsersRepository usersRepository)
     {
         _usersRepository = usersRepository;
     }
