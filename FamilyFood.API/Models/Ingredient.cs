@@ -3,6 +3,8 @@ namespace Family_Food.Models
 {
 	public class Ingredient
 	{
+		//SOLID Princinple: Single Responsibility
+
 		public Guid Id { get; set; } = Guid.NewGuid();
 		public string Name { get; set;}
 		//how to get a unit type for recipes like ounces and cups

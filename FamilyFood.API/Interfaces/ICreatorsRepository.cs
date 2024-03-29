@@ -3,6 +3,7 @@ using Family_Food.Models;
 
 namespace Family_Food.Interfaces
 {
+	// SOLID Principle: Using Interface Segregation
 	public interface ICreatorsRepository
 	{
 		List<Creator> GetAllCreators();

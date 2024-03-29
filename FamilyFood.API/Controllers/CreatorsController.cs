@@ -1,36 +1,36 @@
-﻿using Family_Food.Interfaces;
+﻿using Family_Food.Repositories;
 using Family_Food.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Family_Food.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/[controller]/[action]")]
 public class CreatorsController : ControllerBase
 {
-    private ICreatorsRepository _creatorsRepository;
+    private CreatorsRepository _creatorsRepository;
 
-    public CreatorsController(ICreatorsRepository creatorsRepository)
+    public CreatorsController(CreatorsRepository creatorsRepository)
     {
         _creatorsRepository = creatorsRepository;
     }
 
     //GET
-    [HttpGet(Name = "Get All Creators")]
-    public List<Creator> Index()
+    [HttpGet]
+    public List<Creator> Get()
     {
         return _creatorsRepository.GetAllCreators();
     }
 
     //POST
-    [HttpPost(Name = "Post Creator")]
+    [HttpPost]
     public void Post(Creator creator)
     {
         _creatorsRepository.AddCreator(creator);
     }
 
     //DELETE
-    [HttpDelete(Name = "Delete Creator")]
+    [HttpDelete]
     public void Delete(Creator creator)
     {
         _creatorsRepository.RemoveCreator(creator);

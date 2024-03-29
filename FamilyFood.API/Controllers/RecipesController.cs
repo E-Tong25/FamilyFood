@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Family_Food.Models;
-using Family_Food.Interfaces;
+using Family_Food.Repositories;
 using Family_Food.Data;
 
 namespace Family_Food.Controllers;
@@ -9,9 +9,9 @@ namespace Family_Food.Controllers;
 [Route("api/[controller]")]
 public class RecipesController : ControllerBase
 {
-    private IRecipesRepository _recipesRepository;
+    private RecipesRepository _recipesRepository;
 
-    public RecipesController(IRecipesRepository recipesRepository)
+    public RecipesController(RecipesRepository recipesRepository)
     {
         _recipesRepository = recipesRepository;
     }
@@ -26,7 +26,6 @@ public class RecipesController : ControllerBase
     ////GET: api/recipes/creator
     //[HttpGet(Name = "Get All Recipes By Creator")]
    // Get all recipes from a Single Creator Name
-
 
     //POST
     [HttpPost(Name = "Post Recipe")]

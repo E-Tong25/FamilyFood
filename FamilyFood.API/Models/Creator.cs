@@ -8,7 +8,9 @@ namespace Family_Food.Models
 	{
 		public Guid Id { get; set; }
 		public int UserID { get; set; }
-		public User User { get; set; } = null!;
+		//Allow up to 40 uppercase and lowercase characters.
+		[RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$")]
+        public User User { get; set; } = null!;
 		public List<Recipe> Recipes { get; set; }
 	}
 }
